@@ -1,0 +1,148 @@
+:root {
+  /* Primary */
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--light-grey);
+}
+
+.app {
+  width: 22rem;
+  height: 450px;
+  background-color: var(--white);
+  margin: auto;
+  margin-top: 8em;
+  border-radius: 20px 20px 100px 20px;
+}
+
+.values {
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+  position: relative;
+  padding-bottom: 4rem;
+  margin: 0 2rem;
+  border-bottom: 1px solid var(--off-white);
+  gap: 5px;
+}
+
+.value {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.value.error label {
+  color: var(--light-red);
+}
+
+.value.error input {
+  border-color: var(--light-red);
+}
+
+.value .errorText {
+  position: absolute;
+  bottom: -2.5rem;
+  font-style: italic;
+  color: var(--light-red);
+  font-size: 12px;
+}
+
+label {
+  color: var(--smokey-grey);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+input {
+  font-size: 16px;
+  width: 3rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 5px;
+  color: var(--smokey-grey);
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.buttonImg {
+  background: var(--purple);
+  position: absolute;
+  bottom: -2rem;
+  width: 1.5rem;
+  right: 50%;
+  transform: translate(50%);
+  border-radius: 50%;
+  padding: 1.25rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btnDark {
+  background-color: black;
+}
+
+/* .buttonImg:hover {
+  background-color: black;
+} */
+
+.solution {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  margin-left: 2rem;
+  font-style: italic;
+  font-weight: 800;
+  margin-top: 2rem;
+  justify-content: start;
+}
+
+.solutionColor {
+  color: var(--purple);
+}
+
+@media only screen and (min-width: 600px) {
+  .app {
+    width: 34rem;
+    height: 450px;
+  }
+
+  .solution {
+    margin-top: 1rem;
+  }
+
+  .between img {
+    right: 10%;
+  }
+
+  .values {
+    gap: 20px;
+  }
+}
+
+/* FOOTER START */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
